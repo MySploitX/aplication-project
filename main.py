@@ -93,9 +93,8 @@ def main():
             mysploitx.log(msgData["msgReadTimeout"])
           except requests.exceptions.ConnectionError:
             mysploitx.log(msgData["msgConnectionError"])
-      except IOError as err:
-        print(err)
-        #mysploitx.log("[!] File msg.yml tidak di temukan.")
+      except IOError:
+        mysploitx.log("[!] File msg.yml tidak di temukan.")
     except ImportError:
       mysploitx.log("[!] Install pyyaml dan coba lagi.")
   except ImportError:
